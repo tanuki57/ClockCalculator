@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>時間計算機</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1>時間計算機</h1>
+        <div class="container">
+            <div class="left">
+                <input type="text" id="display">
+            </div>
+            <div class="right">
+                <div>
+                    Hour
+                    <input type="text" id="result" readonly>
+                </div>
+
+                <div>
+                    Minute
+                    <input type="text" id="mresult" readonly>
+                </div>
+            </div>
+        </div>
+        <p> </p>
+        <div>
+            <button class="number">0</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="number">4</button>
+            <button class="operator">+</button>
+        </div>
+        <div>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">-</button>
+        </div>
+        <div>
+            <button class="number">00</button>
+            <button id="aida">:</button>
+            <button id="backspace">back</button>
+            <button id="AC">AC</button>
+            <button id="equal">=</button>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
