@@ -12,8 +12,8 @@ button {
     height: 70px;
     font-size: 28px;
     margin: 4px;
-
     touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 input {
