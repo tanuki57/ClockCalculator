@@ -12,6 +12,10 @@ const display = document.getElementById('display');
 const result = document.getElementById('result');
 const mresult = document.getElementById('mresult');
 
+const history = document.getElementById('history');
+
+let histories = [];
+
 numbers.forEach(function(button) {
     button.addEventListener('click',function() {
         display.value += button.textContent;
@@ -72,6 +76,10 @@ equal.addEventListener('click',function() {
         }
         result.value = hour + ':' + displayMinute;
         mresult.value = totalMinute;
+        histories.unshift(
+            expression + '=' + hour + ':' + displayMinute
+        );
+        history.innerHTML = histories.join('<br>');
     } else if (expression.includes('-')) {
 
         const parts = expression.split('-');
@@ -102,5 +110,10 @@ equal.addEventListener('click',function() {
         }
         result.value = hour + ':' + displayMinute;
         mresult.value = totalMinute;
+        histories.unshift(
+            expression + '=' + hour + ':' + displayMinute
+        );
+        history.innerHTML = histories.join('<br>');
     };
 });
+
